@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id('id_aset');
             $table->foreignId('id_barang')->constrained('barang', 'id_barang')->onDelete('cascade');
             $table->string('nomor_aset')->unique();
-            $table->string('kondisi'); // Contoh isi: 'Baik', 'Rusak Ringan', 'Rusak Berat'
+            $table->string('kondisi');
             $table->timestamps();
         });
     }
