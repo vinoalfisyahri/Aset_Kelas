@@ -1,56 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,15,30&height=180&section=header&text=ASET%20KELAS%20SYSTEM&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=38" width="100%"/>
 </p>
-
-# 🚀 Aset Kelas Web Application
 
 <div align="center">
 
-### ✨ Selamat Datang di Repository Proyek Kami! ✨
-*Assalamu'alaikum Warahmatullahi Wabarakatuh / Salam Sejahtera untuk kita semua.*  
-Terima kasih telah berkunjung ke halaman repository proyek **Aset Kelas**—sebuah platform berbasis web modern yang dirancang untuk mengelola dan memantau inventaris serta aset kelas dengan efisien, cepat, dan terstruktur.
+[![Status](https://img.shields.io/badge/STATUS:-ACTIVE%20DEVELOPMENT-red?style=for-the-badge&logo=git&logoColor=white)]()
+[![Security](https://img.shields.io/badge/SECURITY:-HIGH-blue?style=for-the-badge&logo=security&logoColor=white)]()
+[![Build](https://img.shields.io/badge/BUILD:-STABLE-success?style=for-the-badge&logo=codeforces&logoColor=white)]()
 
 </div>
 
 ---
 
-## 👥 Tim Pengembang (Kelompok)
+## ⚡ WELCOME TO THE CORE
+> *"Code is like humor. When you have to explain it, it’s bad."* — Cory House
 
-Proyek hebat ini dibangun dengan kerja keras, kolaborasi solid, dan dedikasi penuh oleh anggota kelompok berikut:
-
-| Nama Anggota | Peran / Kontribusi |
-| :--- | :--- |
-| 🛡️ **Abe** | Development & System Support |
-| 💻 **Zafran** | Backend & Database Engineering |
-| ⚙️ **Zulfikar** | Frontend & UI/UX Integration |
-| 📊 **Raihan** | Feature Testing & Documentation |
-| 🚀 **Vino** | Lead Developer & Repository Maintainer |
+Selamat datang di repository resmi **Aset Kelas**. Sistem manajemen inventaris paling beringas yang diciptakan khusus untuk menumpas kekacauan pendataan aset kelas dengan presisi absolut dan performa tanpa kompromi.
 
 ---
 
-## 🛠️ Tech Stack & Fitur Unggulan
+## 💀 SQUAD ELITE (DEVELOPER TEAM)
 
-Aplikasi ini dikembangkan menggunakan teknologi modern:
-- **Framework:** Laravel (PHP Framework)
-- **Database:** MySQL
-- **Frontend Assets:** Vite, Blade, Tailwind / Bootstrap
-- **Fitur Utama:**
-  - Manajemen Data Aset & Inventaris
-  - Pencatatan & Penghitungan Penyusutan Aset Otomatis
-  - Sistem Keamanan & Autentikasi Pengguna
-  - Antarmuka yang Responsif dan Ramah Pengguna
+Ditempa di atas barisan kode, didorong oleh kopi dan ambisi. Inilah para eksekutor di balik layar project ini:
+
+| Codename | Operator | Role & Specialization |
+| :---: | :--- | :--- |
+| 🔥 | **Vino** | *Lead Developer & Commander* |
+| 💻 | **Zafran** | *Backend & Database Architect* |
+| ⚙️ | **Zulfikar** | *Frontend & UI/UX Specialist* |
+| 🛡️ | **Abe** | *System Support & Integration* |
+| 📊 | **Raihan** | *QA Engineer & Documentation* |
 
 ---
 
-## ⚙️ Panduan Memulai Cepat (Quick Start)
+## 🛠️ ARSENAL & TECH STACK
 
-Jika Anda ingin menjalankan proyek ini secara lokal di komputer Anda, ikuti langkah-langkah berikut:
+Dibangun di atas fondasi teknologi modern yang tangguh:
 
-1. **Clone repository ini:**
-   ```bash
-   git clone [https://github.com/vinoalfisyahri/Aset_Kelas.git](https://github.com/vinoalfisyahri/Aset_Kelas.git)
+* **Engine:** PHP & Laravel Ecosystem
+* **Database:** MySQL (High-Performance Engine)
+* **Frontend Assets:** Vite & Modern CSS
+* **Control Center:** Git & GitHub
+
+---
+
+## 🚀 DEPLOYMENT PROTOCOL (QUICK START)
+
+Ingin membakar mesin ini di server lokalmu? Jalankan protokol berikut di terminal:
+
+```bash
+# 1. Clone repository ke local machine
+git clone [https://github.com/vinoalfisyahri/Aset_Kelas.git](https://github.com/vinoalfisyahri/Aset_Kelas.git)
+
+# 2. Masuk ke markas (direktori proyek)
+cd Aset_Kelas
+
+# 3. Muat semua senjata/dependencies
+composer install
+
+# 4. Duplikasi konfigurasi environment
+cp .env.example .env
+
+# 5. Generate kunci enkripsi utama
+php artisan key:generate
+
+# 6. Bangun struktur database
+php artisan migrate
+
+# 7. Nyalakan mesin server!
+php artisan serve
