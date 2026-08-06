@@ -28,7 +28,7 @@ Ditempa di atas barisan kode, didorong oleh kopi dan ambisi. Inilah para eksekut
 | 🔥 | **Vino** | *Lead Developer & Commander* |
 | 💻 | **Zafran** | *Backend & Database Architect* |
 | ⚙️ | **Zulfikar** | *Frontend & UI/UX Specialist* |
-| 🛡️ | **Abe** | *System Support & Integration* |
+| 🛡️ | **Abee** | *System Support & Integration* |
 | 📊 | **Raihan** | *QA Engineer & Documentation* |
 
 ---
