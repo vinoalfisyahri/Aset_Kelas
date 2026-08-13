@@ -10,5 +10,5 @@ Route::get('/', function () {
 });
 
 Route::apiResource('barang', BarangController::class);
-Route::apiResource('aset-kelas', AsetKelasController::class);
+Route::resource('aset-kelas', AsetKelasController::class);
 Route::apiResource('penyusutan', PenyusutanController::class);

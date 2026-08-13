@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\AsetKelas;
+use App\Models\Aset;
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 
 class AsetKelasController extends Controller
@@ -12,6 +14,11 @@ class AsetKelasController extends Controller
      */
     public function index()
     {
+        $asetKelas = AsetKelas::with(['aset', 'kelas'])->latest()->get();
+    $dataAset  = Aset::all();
+    $dataKelas = Kelas::all();
+
+    return view('aset_kelas.index', compact('asetKelas', 'dataAset', 'dataKelas'));
         $asetKelas = AsetKelas::with(['aset', 'kelas'])->latest()->get();
 
         return response()->json([
