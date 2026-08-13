@@ -18,14 +18,6 @@ class KategoriAsetController extends Controller
     }
 
     /**
-     * Menampilkan form tambah kategori aset.
-     */
-    public function create()
-    {
-        return view('kategori_aset.create');
-    }
-
-    /**
      * Menyimpan kategori aset baru.
      */
     public function store(Request $request)
@@ -44,28 +36,8 @@ class KategoriAsetController extends Controller
         ]);
 
         return redirect()
-            ->route('kategori-aset.index')
+            ->route('kategori_aset.index')
             ->with('success', 'Kategori aset berhasil ditambahkan.');
-    }
-
-    /**
-     * Menampilkan detail kategori aset.
-     */
-    public function show($id)
-    {
-        $kategoriAset = KategoriAset::findOrFail($id);
-
-        return view('kategori_aset.show', compact('kategoriAset'));
-    }
-
-    /**
-     * Menampilkan form edit kategori aset.
-     */
-    public function edit($id)
-    {
-        $kategoriAset = KategoriAset::findOrFail($id);
-
-        return view('kategori_aset.edit', compact('kategoriAset'));
     }
 
     /**
@@ -89,7 +61,7 @@ class KategoriAsetController extends Controller
         ]);
 
         return redirect()
-            ->route('kategori-aset.index')
+            ->route('kategori_aset.index')
             ->with('success', 'Kategori aset berhasil diperbarui.');
     }
 
@@ -103,7 +75,7 @@ class KategoriAsetController extends Controller
         $kategoriAset->delete();
 
         return redirect()
-            ->route('kategori-aset.index')
+            ->route('kategori_aset.index')
             ->with('success', 'Kategori aset berhasil dihapus.');
     }
 }

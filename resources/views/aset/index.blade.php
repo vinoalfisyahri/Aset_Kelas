@@ -1,11 +1,11 @@
-@extends('layouts.app') {{-- Sesuaikan dengan layout utama aplikasi Anda --}}
+@extends('layouts.app')
 
 @section('content')
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Data Pengajuan</h1>
+    <h1 class="mt-4">Data Aset</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="{{ url('/') }}">Dashboard</a></li>
-        <li class="breadcrumb-item active">Pengajuan</li>
+        <li class="breadcrumb-item active">Aset</li>
     </ol>
 
     {{-- Notifikasi Sukses --}}
@@ -20,10 +20,10 @@
         <div class="card-header d-flex justify-content-between align-items-center">
             <div>
                 <i class="fas fa-table me-1"></i>
-                Daftar Pengajuan Barang
+                Daftar Aset
             </div>
-            <a href="{{ route('pengajuan.create') }}" class="btn btn-primary btn-sm">
-                <i class="fas fa-plus"></i> Tambah Pengajuan
+            <a href="{{ route('aset.create') }}" class="btn btn-primary btn-sm">
+                <i class="fas fa-plus"></i> Tambah Aset
             </a>
         </div>
         <div class="card-body">
@@ -32,42 +32,35 @@
                     <thead>
                         <tr>
                             <th width="5%">No</th>
-                            <th>Pemohon (User)</th>
-                            <th>Kelas</th>
-                            <th>Barang</th>
-                            <th>Jumlah</th>
-                            <th>Status</th>
+                            <th>Kode/Nama Barang</th>
+                            <th>Nomor Aset</th>
+                            <th>Kondisi</th>
                             <th width="15%">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($pengajuan as $item)
+                        @forelse($aset as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $item->user->name ?? '-' }}</td>
-                                <td>{{ $item->kelas->nama_kelas ?? '-' }}</td>
-                                <td>{{ $item->barang->nama_barang ?? '-' }}</td>
-                                <td>{{ $item->jumlah }}</td>
+                                <td>{{ $item->barang->nama_barang ?? $item->barang->kode_barang ?? '-' }}</td>
+                                <td>{{ $item->nomor_aset }}</td>
                                 <td>
-                                    @if($item->status == 'pending')
-                                        <span class="badge bg-warning text-dark">Pending</span>
-                                    @elseif($item->status == 'disetujui')
-                                        <span class="badge bg-success">Disetujui</span>
-                                    @elseif($item->status == 'ditolak')
-                                        <span class="badge bg-danger">Ditolak</span>
+                                    @if(strtolower($item->kondisi) == 'baik')
+                                        <span class="badge bg-success">Baik</span>
+                                    @elseif(strtolower($item->kondisi) == 'rusak ringan')
+                                        <span class="badge bg-warning text-dark">Rusak Ringan</span>
+                                    @elseif(strtolower($item->kondisi) == 'rusak berat')
+                                        <span class="badge bg-danger">Rusak Berat</span>
                                     @else
-                                        <span class="badge bg-secondary">{{ $item->status }}</span>
+                                        <span class="badge bg-secondary">{{ $item->kondisi }}</span>
                                     @endif
                                 </td>
                                 <td>
                                     <div class="d-flex gap-1">
-                                        <a href="{{ route('pengajuan.show', $item->id_pengajuan) }}" class="btn btn-info btn-sm text-white" title="Detail">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-                                        <a href="{{ route('pengajuan.edit', $item->id_pengajuan) }}" class="btn btn-warning btn-sm text-white" title="Edit">
+                                        <a href="{{ route('aset.edit', $item->id_aset) }}" class="btn btn-warning btn-sm text-white" title="Edit">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{ route('pengajuan.destroy', $item->id_pengajuan) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data ini?');">
+                                        <form action="{{ route('aset.destroy', $item->id_aset) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data aset ini?');">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" title="Hapus">
@@ -79,7 +72,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="7" class="text-center">Belum ada data pengajuan.</td>
+                                <td colspan="5" class="text-center">Belum ada data aset.</td>
                             </tr>
                         @endforelse
                     </tbody>
@@ -88,4 +81,4 @@
         </div>
     </div>
 </div>
-@endsection --
+@endsection
