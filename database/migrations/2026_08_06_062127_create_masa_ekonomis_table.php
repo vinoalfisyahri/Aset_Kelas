@@ -13,9 +13,6 @@ return new class extends Migration
     {
         Schema::create('masa_ekonomis', function (Blueprint $table) {
             $table->id('id_ekonomis');
-
-            // Pastikan tabel 'aset' sudah dibuat pada migration sebelumnya
-            // dan menggunakan engine InnoDB dengan tipe data primary key yang sama (bigint unsigned)
             $table->foreignId('id_aset')
                 ->constrained('aset', 'id_aset')
                 ->cascadeOnDelete();
