@@ -27,4 +27,4 @@ Route::resource('kategori_aset', KategoriAsetController::class);
 Route::resource('kelas', KelasController::class);
 Route::resource('masa-ekonomis', MasaEkonomisController::class);
 Route::resource('pengajuan', PengajuanController::class);
-Route::resource('penyusutan' PenyusutanController::class);
+Route::resource('penyusutan', PenyusutanController::class);
