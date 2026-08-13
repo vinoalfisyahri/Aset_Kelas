@@ -10,6 +10,7 @@ class Pengajuan extends Model
     use HasFactory;
 
     protected $table = 'pengajuan';
+
     protected $primaryKey = 'id_pengajuan';
 
     protected $fillable = [
@@ -20,16 +21,39 @@ class Pengajuan extends Model
         'status',
     ];
 
+    /**
+     * Relasi ke tabel users
+     */
     public function user()
     {
-        return $this->belongsTo(User::class, 'id_user', 'id');
+        return $this->belongsTo(
+            User::class,
+            'id_user',
+            'id'
+        );
     }
+
+    /**
+     * Relasi ke tabel kelas
+     */
     public function kelas()
     {
-        return $this->belongsTo(Kelas::class, 'id_kelas', 'id_kelas');
+        return $this->belongsTo(
+            Kelas::class,
+            'id_kelas',
+            'id_kelas'
+        );
     }
+
+    /**
+     * Relasi ke tabel barang
+     */
     public function barang()
     {
-        return $this->belongsTo(Barang::class, 'id_barang', 'id_barang');
+        return $this->belongsTo(
+            Barang::class,
+            'id_barang',
+            'id_barang'
+        );
     }
 }

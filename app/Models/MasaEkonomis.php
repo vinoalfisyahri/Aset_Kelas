@@ -10,6 +10,7 @@ class MasaEkonomis extends Model
     use HasFactory;
 
     protected $table = 'masa_ekonomis';
+
     protected $primaryKey = 'id_ekonomis';
 
     protected $fillable = [
@@ -18,7 +19,9 @@ class MasaEkonomis extends Model
         'nilai_residu',
     ];
 
-    // Relasi balik ke model Aset (Belongs To)
+    /**
+     * Relasi ke tabel aset
+     */
     public function aset()
     {
         return $this->belongsTo(Aset::class, 'id_aset', 'id_aset');

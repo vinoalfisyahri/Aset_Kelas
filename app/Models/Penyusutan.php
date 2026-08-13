@@ -10,6 +10,7 @@ class Penyusutan extends Model
     use HasFactory;
 
     protected $table = 'penyusutan';
+
     protected $primaryKey = 'id_penyusutan';
 
     protected $fillable = [
@@ -19,8 +20,15 @@ class Penyusutan extends Model
         'nilai_buku',
     ];
 
+    /**
+     * Relasi ke tabel aset
+     */
     public function aset()
     {
-        return $this->belongsTo(Aset::class, 'id_aset', 'id_aset');
+        return $this->belongsTo(
+            Aset::class,
+            'id_aset',
+            'id_aset'
+        );
     }
 }
