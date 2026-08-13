@@ -10,9 +10,14 @@ return new class extends Migration
     {
         Schema::create('masa_ekonomis', function (Blueprint $table) {
             $table->id('id_ekonomis');
-            $table->foreignId('id_aset')->constrained('aset', 'id_aset')->onDelete('cascade');
-            $table->integer('umur');
+
+            $table->foreignId('id_aset')
+                ->constrained('aset', 'id_aset')
+                ->cascadeOnDelete();
+
+            $table->unsignedInteger('umur');
             $table->decimal('nilai_residu', 15, 2)->default(0);
+
             $table->timestamps();
         });
     }
