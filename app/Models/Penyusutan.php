@@ -20,7 +20,10 @@ class Penyusutan extends Model
         'nilai_buku',
     ];
 
-
+    /**
+     * Relasi ke model Aset.
+     * Menggunakan primary key kustom 'id_aset'.
+     */
     public function aset()
     {
         return $this->belongsTo(
