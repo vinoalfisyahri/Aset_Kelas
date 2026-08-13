@@ -12,7 +12,6 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('id_aset')->constrained('aset', 'id_aset')->cascadeOnDelete();
-            // Sesuaikan dengan parameter kedua ('id_kelas')
             $table->foreignId('id_kelas')->constrained('kelas', 'id_kelas')->cascadeOnDelete();
 
             $table->timestamps();
