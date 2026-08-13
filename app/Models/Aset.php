@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Aset extends Model
 {
     use HasFactory;
+
+    protected $table = 'aset';
+
+    protected $primaryKey = 'id_aset';
+
+    protected $fillable = [
+        'id_barang',
+        'nomor_aset',
+        'kondisi',
+    ];
+
+    /**
+     * Relasi ke tabel barang
+     */
+    public function barang()
+    {
+        return $this->belongsTo(DataBarang::class, 'id_barang', 'id_barang');
+    }
 }
