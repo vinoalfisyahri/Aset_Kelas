@@ -8,7 +8,7 @@ use App\Http\Controllers\MasaEkonomisController;
 use App\Http\Controllers\PengajuanController;
 
 use App\Http\Controllers\BarangController;
-use App\Http\Controllers\PenyusutanController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +38,5 @@ Route::resource('barang', BarangController::class);
 
 Route::resource('pengajuan', PengajuanController::class);
 Route::resource('pengajuan', PengajuanController::class);
-Route::resource('penyusutan', PenyusutanController::class);
+
 
