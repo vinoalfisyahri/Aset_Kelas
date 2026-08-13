@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::resource('aset', AsetController::class);
-Route::resource('kategori-aset', KategoriAsetController::class);
+Route::resource('kategori_aset', KategoriAsetController::class);
 Route::resource('kelas', KelasController::class);
 Route::resource('masa-ekonomis', MasaEkonomisController::class);
 Route::resource('pengajuan', PengajuanController::class);
