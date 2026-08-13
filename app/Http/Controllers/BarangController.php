@@ -10,10 +10,12 @@ class BarangController extends Controller
     /**
      * Menampilkan daftar semua barang.
      */
-    public function index()
-    {
-        $barang = Barang::with('aset')->latest()->get();
+    public function index(Request $request)
+{
+    $barang = Barang::with('aset')->latest()->get();
 
+    // Jika dipanggil sebagai API/JSON
+    if ($request->wantsJson()) {
         return response()->json([
             'success' => true,
             'message' => 'Daftar data barang',
@@ -21,6 +23,9 @@ class BarangController extends Controller
         ], 200);
     }
 
+    // Jika dipanggil via Web Browser
+    return view('barang.index', compact('barang'));
+}
     /**
      * Menyimpan data barang baru.
      */
@@ -81,6 +86,16 @@ class BarangController extends Controller
         ], 200);
     }
 
+public function create()
+{
+    return view('barang.create');
+}
+
+    public function edit($id)
+{
+    $barang = Barang::findOrFail($id);
+    return view('barang.edit', compact('barang'));
+}
     /**
      * Menghapus data barang.
      */

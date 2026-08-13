@@ -21,9 +21,6 @@ class Barang extends Model
         'harga',
     ];
 
-    /**
-     * Relasi ke tabel aset
-     */
     public function aset()
     {
         return $this->hasMany(Aset::class, 'id_barang', 'id_barang');

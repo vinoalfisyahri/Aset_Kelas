@@ -45,9 +45,6 @@ class Pengajuan extends Model
         );
     }
 
-    /**
-     * Relasi ke tabel barang
-     */
     public function barang()
     {
         return $this->belongsTo(

@@ -20,9 +20,7 @@ class Penyusutan extends Model
         'nilai_buku',
     ];
 
-    /**
-     * Relasi ke tabel aset
-     */
+
     public function aset()
     {
         return $this->belongsTo(

@@ -19,9 +19,6 @@ class Aset extends Model
         'kondisi',
     ];
 
-    /**
-     * Relasi ke tabel barang
-     */
     public function barang()
     {
         return $this->belongsTo(Barang::class, 'id_barang', 'id_barang');
