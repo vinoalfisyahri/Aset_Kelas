@@ -10,6 +10,7 @@ class Barang extends Model
     use HasFactory;
 
     protected $table = 'barang';
+
     protected $primaryKey = 'id_barang';
 
     protected $fillable = [
@@ -20,6 +21,9 @@ class Barang extends Model
         'harga',
     ];
 
+    /**
+     * Relasi ke tabel aset
+     */
     public function aset()
     {
         return $this->hasMany(Aset::class, 'id_barang', 'id_barang');
